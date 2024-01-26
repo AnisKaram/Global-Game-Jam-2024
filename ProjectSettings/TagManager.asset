@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wheel_BackLeft
+  - Wheel_BackRight
+  - Wheel_FrontLeft
+  - Wheel_FrontRight
   layers:
   - Default
   - TransparentFX
