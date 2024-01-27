@@ -8,6 +8,7 @@ TagManager:
   - Wheel_BackRight
   - Wheel_FrontLeft
   - Wheel_FrontRight
+  - CameraParent
   layers:
   - Default
   - TransparentFX

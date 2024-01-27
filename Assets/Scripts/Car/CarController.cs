@@ -4,10 +4,10 @@ public class CarController : MonoBehaviour
 {
     #region Fields
     [SerializeField, Tooltip("Maximum Steering Angle of the Wheels")]
-    private static float _maxSteeringAngle = 38.5f;
+    private static float _maxSteeringAngle = 50f;
 
     [SerializeField, Tooltip("Maximum Torque applied to the Driving Wheels (only)")]
-    private static float _maxWheelTorque = 3000f;
+    private static float _maxWheelTorque = 3500f;
 
     [SerializeField, Tooltip("Drag and Drop Wheel Shape")]
     private GameObject _wheelShape;
