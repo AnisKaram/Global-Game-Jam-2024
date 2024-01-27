@@ -29,6 +29,12 @@ public class CarController : MonoBehaviour
     private WheelCollider[] _wheelColliders;
     #endregion
 
+    public float Torque
+    {
+        get { return _torque; }
+        set { _torque = value; }
+    }
+
     #region Unity Methods
     private void Awake()
     {

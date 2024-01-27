@@ -9,6 +9,8 @@ TagManager:
   - Wheel_FrontLeft
   - Wheel_FrontRight
   - CameraParent
+  - Character
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

@@ -12,3 +12,10 @@ public enum Handling
     ZC,
     OneThree
 }
+
+public enum GameState
+{
+    Idle,
+    Running,
+    Ended
+}
