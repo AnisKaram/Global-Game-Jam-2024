@@ -21,13 +21,11 @@ public class GameWonLostModel : MonoBehaviour
     private void GameWon()
     {
         _gameWonLostPresenter.ShowGameWonCanvas();
-        Debug.Log($"Game won");
     }
 
     private void GameLost()
     {
         Time.timeScale = 0;
         _gameWonLostPresenter.ShowGameLostCanvas();
-        Debug.Log($"Game Lost");
     }
 }

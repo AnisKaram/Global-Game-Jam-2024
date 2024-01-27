@@ -11,6 +11,7 @@ TagManager:
   - CameraParent
   - Character
   - Ground
+  - FinishLine
   layers:
   - Default
   - TransparentFX

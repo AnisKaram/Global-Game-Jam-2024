@@ -536,9 +536,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wheelShape: {fileID: 919132149155446097, guid: a4fbd8a5c8e82423f8d14b0025fd76fa,
     type: 3}
-  _criticalMaxEngineSpeed: 15
-  _criticalStepsAbove: 8
-  _criticalStepsBelow: 5
+  _criticalMaxEngineSpeed: 10
+  _criticalStepsAbove: 5
+  _criticalStepsBelow: 3
   _drivingType: 0
 --- !u!114 &8927381325540636077
 MonoBehaviour:
@@ -572,7 +572,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   IsGrounded: 0
-  Height: 0
 --- !u!1 &7583716052727157895
 GameObject:
   m_ObjectHideFlags: 0

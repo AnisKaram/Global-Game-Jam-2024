@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class HitDetection : MonoBehaviour
 {
     [SerializeField] private LayerMask _groundMask;
-    public bool IsGrounded;
 
     public static event UnityAction OnCarHitCharacter;
 
@@ -16,6 +15,11 @@ public class HitDetection : MonoBehaviour
             OnCarHitCharacter?.Invoke();
             Destroy(collision.gameObject, Random.Range(2.5f, 3.5f));
         }
+
+        if (collision.collider.CompareTag("FinishLine"))
+        {
+            GameManager.Instance.GameWon();
+        } 
     }
     
     private void Update()
@@ -26,12 +30,9 @@ public class HitDetection : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity, _groundMask))
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
-                Debug.Log("Did Hit");
-                IsGrounded = true;
             }
             else
             {
-                IsGrounded = false;
                 GameManager.Instance.GameLost();
             }
         }
