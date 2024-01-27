@@ -4,3 +4,11 @@ public enum DriveType
     FrontWheelDrive,
     RearWheelDrive
 }
+
+public enum Handling
+{
+    AD,
+    QE,
+    ZC,
+    OneThree
+}
