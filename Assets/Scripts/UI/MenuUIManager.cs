@@ -29,11 +29,13 @@ public class MenuUIManager : MonoBehaviour
 
     private void OnPlayButtonClicked()
     {
+        SoundManager.Instance.PlaySfx(1);
         SceneManager.LoadSceneAsync(1);
     }
 
     private void OnCarButtonClicked(int carIndex)
     {
+        SoundManager.Instance.PlaySfx(1);
         _carPickerSO.carInstanceValue = carIndex;
         SaveCarPicked(carIndex);
         UpdatePickedImages(carIndex);

@@ -14,6 +14,8 @@ public class HitDetection : MonoBehaviour
             collision.collider.tag = "Untagged";
             OnCarHitCharacter?.Invoke();
             Destroy(collision.gameObject, Random.Range(2.5f, 3.5f));
+            SoundManager.Instance.PlayAlienSfx(Random.Range(0, SoundManager.Instance.ListOfAlienClips.Count));
+            SoundManager.Instance.PlaySfx(0);
         }
 
         if (collision.collider.CompareTag("FinishLine"))

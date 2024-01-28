@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         {
             _gameState = GameState.Running;
             Time.timeScale = 1;
+
+            SoundManager.Instance.PlayMusic(0);
         }
     }
 
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
 
     public void GameWon()
     {
+        SoundManager.Instance.StopMusic();
+        SoundManager.Instance.PlaySfx(2);
         _gameState = GameState.Ended;
         Time.timeScale = 0;
 
@@ -65,6 +69,8 @@ public class GameManager : MonoBehaviour
 
     public void GameLost()
     {
+        SoundManager.Instance.StopMusic();
+        SoundManager.Instance.PlaySfx(3);
         _gameState = GameState.Ended;
         Time.timeScale = 0;
 
