@@ -7,6 +7,6 @@ public class TimerPresenter : MonoBehaviour
 
     public void UpdateTimerOnUI(string timer)
     {
-        _timerText.text = timer;
+        _timerText.text = $"Timer: {timer}";
     }
 }
