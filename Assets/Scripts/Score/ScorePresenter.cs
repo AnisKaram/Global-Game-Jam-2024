@@ -9,6 +9,6 @@ public class ScorePresenter : MonoBehaviour
 
     public void UpdateScoreTextOnUI(int score)
     {
-        _scoreText.text = $"Score: {score}";
+        _scoreText.text = $"Laughs: {score}";
     } 
 }

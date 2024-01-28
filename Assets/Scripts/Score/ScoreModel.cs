@@ -21,7 +21,8 @@ public class ScoreModel : MonoBehaviour
     private void Awake()
     {
         HitDetection.OnCarHitCharacter += IncrementScore;
-        GameManager.OnGameWon += SaveHighScore; 
+        GameManager.OnGameWon += SaveHighScore;
+        GameManager.OnGameWon += SaveTotalLaughs;
 
         _score = 0;
         _scorePresenter.UpdateScoreTextOnUI(_score);
@@ -33,11 +34,12 @@ public class ScoreModel : MonoBehaviour
     {
         HitDetection.OnCarHitCharacter -= IncrementScore;
         GameManager.OnGameWon -= SaveHighScore;
+        GameManager.OnGameWon -= SaveTotalLaughs;
     }
 
     private void IncrementScore()
     {
-        _score += 10;
+        _score += 1;
         _scorePresenter.UpdateScoreTextOnUI(_score);
 
         if (_score > _highScore)
@@ -61,6 +63,13 @@ public class ScoreModel : MonoBehaviour
             PlayerPrefs.SetInt("highScore_value", _highScore);
             PlayerPrefs.Save();
         }
+    }
+
+    private void SaveTotalLaughs()
+    {
+        int previousTotalLaughs = PlayerPrefs.GetInt("totalLaughs_value", 0);
+        PlayerPrefs.SetInt("totalLaughs_value", _score + previousTotalLaughs);
+        PlayerPrefs.Save();
     }
 
     private int LoadSavedHighScore()

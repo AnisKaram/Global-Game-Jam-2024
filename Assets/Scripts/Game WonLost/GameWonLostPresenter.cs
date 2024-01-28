@@ -44,7 +44,7 @@ public class GameWonLostPresenter : MonoBehaviour
         _gameWonMainMenuButton.onClick.AddListener(_mainMenuAction);
         _gameWonQuitButton.onClick.AddListener(_quitAction);
 
-        _scoreText.text = $"Score: {_scoreModel.Score}";
+        _scoreText.text = $"Laughs: {_scoreModel.Score}";
         _highScoreText.text = $"HighScore: {_scoreModel.HighScore}";
 
         _gameWonCanvas.SetActive(true);
@@ -61,16 +61,19 @@ public class GameWonLostPresenter : MonoBehaviour
 
     private void OnRestartButtonClicked()
     {
+        SoundManager.Instance.PlaySfx(1);
         SceneManager.LoadSceneAsync(1);
     }
 
     private void OnMainMenuButtonClicked()
     {
+        SoundManager.Instance.PlaySfx(1);
         SceneManager.LoadSceneAsync(0);
     }
 
     private void OnQuitButtonClicked()
     {
+        SoundManager.Instance.PlaySfx(1);
         Application.Quit();
     }
 }

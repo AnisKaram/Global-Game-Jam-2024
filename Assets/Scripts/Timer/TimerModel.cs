@@ -9,7 +9,7 @@ public class TimerModel : MonoBehaviour
 
     private void Awake()
     {
-        _timer = Random.Range(25f, 30f);    
+        _timer = Random.Range(28f, 35f);    
     }
 
     private void Update()
